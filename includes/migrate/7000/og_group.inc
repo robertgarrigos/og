@@ -12,6 +12,10 @@ class OgMigrateGroup extends Migration {
    */
   protected $systemOfRecord = Migration::DESTINATION;
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
     $this->arguments = $arguments;
     parent::__construct($arguments);
@@ -48,6 +52,6 @@ class OgMigrateGroup extends Migration {
    * Construct the machine name from the bundle.
    */
   protected function generateMachineName($class_name = NULL) {
-    return drupal_strtolower('OgMigrateGroup' . ucfirst($this->arguments['bundle']));
+    return backdrop_strtolower('OgMigrateGroup' . ucfirst($this->arguments['bundle']));
   }
 }

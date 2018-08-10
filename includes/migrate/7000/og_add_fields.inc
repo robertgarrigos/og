@@ -7,6 +7,10 @@
 
 class OgMigrateAddFields extends MigrationBase {
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
     parent::__construct($arguments);
     $this->description = t('Add OG related fields to group and group-content node-types.');
@@ -14,6 +18,7 @@ class OgMigrateAddFields extends MigrationBase {
   }
 
   public function isComplete() {
+    // TODO This variable was probably removed in Backdrop without replacement.
     return !variable_get('og_7000_add_field', FALSE);
   }
 
@@ -24,6 +29,7 @@ class OgMigrateAddFields extends MigrationBase {
     og_create_field(OG_AUDIENCE_FIELD, 'user', 'user');
     foreach (node_type_get_types() as $type) {
       // Check if the variable exists.
+      // TODO This variable was probably removed in Backdrop without replacement.
       if ($type_usage = variable_get('og_content_type_usage_' . $type->type)) {
         switch ($type_usage) {
           case 'group':
@@ -77,6 +83,7 @@ class OgMigrateAddFields extends MigrationBase {
               field_create_instance($instance);
 
               // Delete the OG6 variable.
+              // TODO This variable was probably removed in Backdrop without replacement.
               variable_del('og_content_type_usage_' . $type);
             }
           }
@@ -85,6 +92,7 @@ class OgMigrateAddFields extends MigrationBase {
     }
 
     // Delete the field that indicates we still need to add fields.
+    // TODO This variable was probably removed in Backdrop without replacement.
     variable_del('og_7000_add_field');
 
     return MigrationBase::RESULT_COMPLETED;

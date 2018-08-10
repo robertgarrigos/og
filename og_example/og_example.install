@@ -23,3 +23,24 @@ function og_example_enable() {
   );
   og_create_field(OG_AUDIENCE_FIELD, 'node', 'post', $og_field);
 }
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function og_example_update_last_removed() {
+  return;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function og_example_update_1000() {
+  $config = config('og_example.settings');
+}
+
+/**
+ * Implements hook_install().
+ */
+function og_example_install() {
+  // Dynamically generated variable data was detected.
+}

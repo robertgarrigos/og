@@ -8,6 +8,10 @@
 
 class OgMigrateContent extends Migration {
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
 
     $this->description = t('Upgrade nodes that are group-content, by settings the correct field value.');

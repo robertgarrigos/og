@@ -9,6 +9,10 @@ abstract class OgEntityMigration extends Migration {
 
   public $keyName = 'id';
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('og_7200'));
 

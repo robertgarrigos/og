@@ -22,6 +22,10 @@ class OgMigrateRoles extends OgEntityMigration {
    */
   protected $systemOfRecord = Migration::DESTINATION;
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
     $this->description = t('Add per-bundle OG roles.');
 
@@ -97,7 +101,7 @@ class OgMigrateRoles extends OgEntityMigration {
       // they exist.
       return;
     }
-    list(,, $bundle) = entity_extract_ids($group_type, $group);
+    list(, , $bundle) = entity_extract_ids($group_type, $group);
 
     $entity->group_type = $group_type;
     $entity->gid = $gid;

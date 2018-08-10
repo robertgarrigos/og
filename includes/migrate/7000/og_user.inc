@@ -7,6 +7,10 @@
 
 class OgMigrateUser extends Migration {
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
     parent::__construct($arguments);
 

@@ -34,6 +34,10 @@ class OgMigrateUserRoles extends OgEntityMigration {
     ),
   );
 
+  /**
+   * @todo Please document this function.
+   * @see http://drupal.org/node/1354
+   */
   public function __construct($arguments = array()) {
     $this->description = t('Update the group ID in user roles.');
 
@@ -74,7 +78,7 @@ class OgMigrateUserRoles extends OgEntityMigration {
       return;
     }
     // Get the bundle from the entity.
-    list(,, $bundle) = entity_extract_ids($group_type, $group);
+    list(, , $bundle) = entity_extract_ids($group_type, $group);
 
     // Get the per-bundle roles, and replace the role ID, with the
     // per-bundle role ID.

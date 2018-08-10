@@ -1,0 +1,9 @@
+{
+    "_config_name": "og.settings",
+    "og_node_access_strict": "TRUE",
+    "og_use_queue": "FALSE",
+    "og_orphans_delete": "FALSE",
+    "og_group_manager_full_access": "TRUE",
+    "og_maintain_overridden_roles": "TRUE",
+    "og_features_ignore_og_fields": "FALSE"
+}
